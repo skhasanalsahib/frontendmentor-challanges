@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf), format(truetype);
+}
+
+:root {
+    /* primary colors */
+    --Light-red: hsl(0, 100%, 67%);
+    --Ultra-Light-red: hsla(0, 100%, 67%, 10%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Light-Orangey-yellow: hsla(39, 100%, 56%, 10%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Light-Green-teal: hsla(166, 100%, 37%, 10%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-Cobalt-blue: hsla(234, 85%, 45%, 10%);
+
+    /* for gradients */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* natural colors */
+    --White: hsl(0, 0%, 100%);
+    --Light-white: hsla(0, 0%, 100%, 40%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --Light-gray-blue: hsla(224, 30%, 27%, 60%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 60px 40px 60px;
+
+    background: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 0 0 30px 30px ;
+}
+
+.result h4 {
+    font-size: 20px;
+    color: var(--Light-lavender);
+}
+
+.score-circle {
+    background: linear-gradient(180deg, var(--Violet-blue), var(--Persian-blue));
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.score-circle span {
+    font-size: 72px;
+    font-weight: 800;
+    color: var(--White);
+}
+
+.score-circle p {
+    color: var(--Light-white);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.inspiration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--Light-lavender);
+}
+
+.inspiration h2 {
+    color: var(--White);
+}
+
+.inspiration p {
+    text-align: center;
+}
+
+.summary {
+    padding: 20px 30px;
+}
+
+.summary h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.summary-status {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-bar {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.summary-bar:nth-child(1) {
+    background: var(--Ultra-Light-red);
+    color: var(--Light-red);
+}
+.summary-bar:nth-child(2) {
+    background: var(--Light-Orangey-yellow);
+    color: var(--Orangey-yellow);
+}
+.summary-bar:nth-child(3) {
+    background: var(--Light-Green-teal);
+    color: var(--Green-teal);
+}
+.summary-bar:nth-child(4) {
+    background: var(--Light-Cobalt-blue);
+    color: var(--Cobalt-blue);
+}
+
+.icon-text {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-text p {
+    font-weight: 700;
+}
+
+.x-out-of-y {
+    font-weight: 700;
+    color: var(--Light-gray-blue)
+}
+
+.x-out-of-y span {
+    color: var(--Dark-gray-blue);
+}
+
+.continue-btn {
+    padding: 20px;
+    width: 100%;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--White);
+    /* background-color: var(--Dark-gray-blue); */
+    background: var(--Dark-gray-blue);
+    border: none;
+    margin-top: 20px;
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.continue-btn:hover {
+    background: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px hsla(241, 81%, 54%, 0.101);
+    }
+
+    .result {
+        width: 50%;
+        border-radius: 30px ;
+
+    }
+
+    .summary {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+}

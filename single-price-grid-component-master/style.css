@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cyan : hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    font-family: "Karla", serif;
+    font-size: 16px;
+    height: 100vh;
+    min-height: 900px;
+    background-color: hsla(179, 62%, 43%, 0.33);
+    position: relative;
+    padding: 20px 0;
+}
+
+p {
+    line-height: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    max-width: 600px;
+    /* height: 85%; */
+    border-radius: 5px;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.join {
+    /* background-color: white; */
+    padding: 20px 15px;
+    grid-column: 1/3;
+}
+
+.join h4 {
+    color: var(--cyan);
+}
+
+.join p:nth-child(2) {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 25px 0;
+}
+
+.join p:nth-child(3) {
+    color: var(--cyan);
+}
+
+.subscription-card {
+    background-color: var(--cyan);
+    padding: 20px 15px;
+    border-radius: 0 0 0 5px;
+}
+
+.subscription-card h4 {
+    color: white;
+}
+
+.subscription-card h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.subscription-card h2 span {
+    font-size: 14px;   
+    font-weight: 400;
+    color:  hsl(179, 62%, 65%);
+}
+
+.subscription-card p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.subscription-card .signup {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: var(--bright-yellow);
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #00000030;
+    transition: all 500ms ease-in-out;
+}
+
+.subscription-card .signup:hover {
+    background-color: white;
+    color: var(--bright-yellow);
+}
+
+.why-us {
+    background-color: hsla(179, 62%, 43%, 0.65);
+    padding: 20px 15px;
+    border-radius: 0 0 5px 0;
+}
+
+.why-us h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.why-us p {
+    color: hsl(179, 100%, 80%);
+}
+
+
+
+/* for phone */
+@media screen and (max-width: 426px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .join {
+        grid-column: 1;
+    }
+
+    .subscription-card {
+        border-radius: unset;
+    }
+
+    .why-us {
+        border-radius: 0 0 5px 5px;
+    }
+}

@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: "WorkSans", sans-serif;
+    font-size: 14px;
+    color: var(--Grayish-purple);
+}
+
+h4 {
+    font-family: "WorkSans", sans-serif;
+    font-size: 16px;
+    color: var(--Dark-purple);
+    font-weight: 600;
+}
+
+body {
+    background-color: var(--Lightpink);
+    background-image: url('assets/images/background-pattern-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: "WorkSans", sans-serif;
+    font-size: 16px;
+}
+
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+.container {
+    width: 36%;
+    background-color: var(--White);
+    margin: auto;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+
+.heading {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+}
+
+.heading img {
+    height: 32px;
+    width: 32px;
+}
+
+.heading h1 {
+    color: var(--Dark-purple);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+ul li {
+    list-style: none;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--Lightpink);
+}
+
+li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+details summary{
+    list-style: none;
+}
+
+summary div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* summary div h4 {
+    width: 80%;
+    } */
+    
+details p {
+    padding-top: 20px;
+}
+
+#minus-icon {
+    display: none;
+}
+
+details[open] #plus-icon {
+    display: none;
+}
+
+details[open] #minus-icon {
+    display: block;
+}
+
+    
+@media screen and (max-width: 426px) {
+    body {
+        background-color: var(--Lightpink);
+        background-image: url('assets/images/background-pattern-mobile.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .container {
+        padding: 20px;
+        width: 85%;
+    }
+    .heading h1 {
+        font-size: 28px;
+    }
+    .heading img {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 85%;
+    }
+}
